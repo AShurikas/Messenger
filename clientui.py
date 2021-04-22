@@ -9,7 +9,10 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
 
 
-class Ui_MainWindow(object):
+class Ui_MainWindow(QtWidgets.QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(372, 505)
@@ -55,3 +58,9 @@ class Ui_MainWindow(object):
         self.textEdit.setPlaceholderText(_translate("MainWindow", "Enter your message..."))
         self.label.setText(_translate("MainWindow", "Name:"))
         self.label_2.setText(_translate("MainWindow", "Messenger"))
+
+
+app = QtWidgets.QApplication([])
+window = Ui_MainWindow()
+window.show()
+app.exec()
