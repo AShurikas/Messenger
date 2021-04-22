@@ -26,7 +26,10 @@ def status():
     return {
         'status': True,
         'name': 'Training messenger',
-        'time': time.strftime('%-d %B %Y %H:%M')
+        'time': time.strftime('%-d %B %Y %H:%M'),
+        'users': len(set(i['name'] for i in db)),
+        'messages': len(db)
+
     }
 
 
