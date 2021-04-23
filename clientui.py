@@ -10,12 +10,10 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 
 
 class Ui_MainWindow(QtWidgets.QMainWindow):
-    def __init__(self):
-        super().__init__()
-        self.setupUi(self)
+
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(372, 505)
+        MainWindow.resize(372, 459)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.textBrowser = QtWidgets.QTextBrowser(self.centralwidget)
@@ -60,7 +58,4 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.label_2.setText(_translate("MainWindow", "Messenger"))
 
 
-app = QtWidgets.QApplication([])
-window = Ui_MainWindow()
-window.show()
-app.exec()
+
