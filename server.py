@@ -2,18 +2,7 @@ from flask import Flask, request, abort
 import time
 
 app = Flask(__name__)
-db = [
-    {
-        'name': 'Nick',
-        'text': 'Hello',
-        'time': time.time()
-    },
-    {
-        'name': 'Ivan',
-        'text': 'Hello Nick',
-        'time': time.time()
-    }
-]
+db = []
 
 
 @app.route('/')
